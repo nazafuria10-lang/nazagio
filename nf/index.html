@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a la Programación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header>
+        <h1>Mundo de la Programación</h1>
+        <p>"El arte de darle instrucciones a las computadoras"</p>
+    </header>
+
+    <div class="container">
+
+
+        <section class="section">
+            <h2>¿Qué es la Programación?</h2>
+            <p>
+                La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora cómo realizar un trabajo. Se utiliza para crear aplicaciones, sitios web, videojuegos y los sistemas operativos que usamos día a día.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Lenguajes de Desarrollo Web</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>Es la estructura y el esqueleto de una página web.</p>
+                </div>
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>Encargado del diseño, los colores y los estilos visuales.</p>
+                </div>
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>Aporta la lógica, la interactividad y dinamismo.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <h2>Consejos para Programadores</h2>
+            <div class="interactive-box">
+                <p>Haz clic en el botón para obtener un consejo útil:</p>
+                <div class="tip-display" id="tipText">Presiona el botón para empezar...</div>
+                <button onclick="mostrarConsejo()">Obtener Consejo</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Consola de Bienvenida</h2>
+            <p>Haz clic para ejecutar una simulación de código:</p>
+            <br>
+            <button onclick="ejecutarConsola()">Ejecutar Código</button>
+            <div class="console-box" id="consoleOutput">
+                &gt; Esperando ejecución...
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>2026 - Actibvidad 2 realizada por Furiasse y Pastafiglia</p>
+    </footer>
+
+
+    <script>
+        const consejos = [
+            "💡 Comienza con pasos pequeños y prueba tu código frecuentemente.",
+            "🐛 Los errores son normales, aprende a leer los mensajes de la consola.",
+            "📝 Mantén tu código ordenado y bien comentado.",
+            "🔍 Google y la documentación oficial son tus mejores aliados.",
+            "☕ Practica todos los días, la constancia es la clave."
+        ];
+
+        function mostrarConsejo() {
+            const indice = Math.floor(Math.random() * consejos.length);
+            document.getElementById('tipText').innerText = consejos[indice];
+        }
+
+
+        function ejecutarConsola() {
+            const salida = document.getElementById('consoleOutput');
+            salida.innerHTML = "$nom= Nazareno Furiasse;<br> echo: ¡Hola $nom, todo bien?";
+        }
+    </script>
+</body>
+</html>
