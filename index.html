@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS World Tour</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+         
+        #contenedor {
+            width: 100%;
+            margin: auto;
+        }
+
+        #titulo {
+            text-align: center;
+        }
+
+        #encabezado {
+            background-color: #000000;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        #logo img {
+            height: 70px; 
+            width: auto;  
+            margin-top: 15px; 
+        }
+
+        body > div {
+            background: #ffffff;                 
+            border-radius: 20px;            
+            padding: 2.5rem;                    
+            width: 100%;                     
+            max-width: 650px;
+            margin: 2rem auto;       
+            box-sizing: border-box;     
+        }
+
+        h1 {
+            font-size: 38px;         
+            font-weight: 700;      
+            color: #444270;    
+            text-align: center;       
+        }
+
+        h1 + p {
+            text-align: center;
+            color: #fefefe;         
+            margin-bottom: 18px; 
+            font-size: 18px;
+        }
+
+        #banner {
+            height: 600px;
+            background-image: url(img/banner.jpg);
+            background-repeat: repeat;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        button {
+            color: #d01919;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        fieldset {
+            background-color: #ffffff;
+            max-width: 650px;
+            margin: 1.5rem auto;
+            padding: 2rem;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #444270;
+            padding: 0 10px;
+        }
+
+        fieldset > div {
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        #entradas img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        footer {
+            text-align: center; 
+            margin-top: 40px; 
+            margin-bottom: 30px; 
+            font-size: 20px;  
+        }
+
+        footer button {
+            font-size: 18px;
+            padding: 10px 20px; 
+        }
+
+        #boton-entradas {
+            text-align: center;  
+        }
+
+        #boton-entradas button {
+            padding: 25px;
+            font-size: 18px; 
+        }
+
+
+        .oculto {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="vista-inicio">
+        <div id="contenedor">
+            <div id="encabezado">
+                <div id="logo"><img src="img/allaccess-clear.png" alt="logo"></div>
+            </div>
+
+            <div id="banner"></div>
+
+            <div id="titulo">
+                <h1><b>BTS World Tour- Echoes of Soul</b></h1>
+                <p>Prepárate para la experiencia en vivo más deslumbrante de la década. Siente la música, conecta con ARMY y sé parte de la leyenda.</p>
+            </div>
+
+            <div id="boton-entradas">
+                <button id="btn-mostrar-formulario">
+                    Comprar Entradas
+                </button>
+            </div>
+
+            <div id="pie">
+                <footer><i>Esta pagina web ha sido realizada por Nazareno Furiasse de 4°B</i></footer>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="vista-entradas" class="oculto">
+        <div id="entradas"> 
+            <h1>Compra Entradas</h1> 
+            <p>Completa los campos </p> 
+            <p>Campos marcados con * son obligatorios </p> 
+            <img src="img/entradas.jpg" alt="entradas">
+            
+            <form action="#" method="POST" id="registroForm">
+                <fieldset> 
+                    <legend>Datos Personales</legend> 
+                    <div> 
+                        <label for="nombre">Nombre *</label> 
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Nazareno " required> 
+                    </div> 
+                    <div> 
+                        <label for="Apellido">Apellido *</label> 
+                        <input type="text" id="Apellido" name="Apellido" placeholder="Ej: Furiasse" required> 
+                    </div> 
+                    <div> 
+                        <label for="DNI">DNI *</label> 
+                        <input type="number" id="DNI" name="DNI" placeholder="Ej: 50154648 " required> 
+                    </div> 
+                    <div> 
+                        <label for="Fecha de nacimiento">Fecha de nacimiento </label> 
+                        <input type="date" id="Fecha de nacimiento" name="Fecha de nacimiento" placeholder="Ej: 02/03/2010 "> 
+                    </div> 
+                    <div> 
+                        <label for="Correo electrónico">Correo electrónico *</label> 
+                        <input type="email" id="Correo electrónico" name="Correo electrónico" placeholder="Ej: xxxxxxx@gmail.com " required> 
+                    </div> 
+                    <div> 
+                        <label for="Número de teléfono">Número de teléfono</label> 
+                        <input type="number" id="Número de teléfono" name="Número de teléfono" placeholder="Ej: +5491123455077 " required> 
+                    </div> 
+                </fieldset> 
+
+                <fieldset> 
+                    <legend>Datos Extras</legend> 
+                    <div> 
+                        <label for="Ubicación">Ubicación *</label> 
+                        <select id="Ubicación" name="Ubicación" required> 
+                            <option value="">Seleccione una Ubicación </option> 
+                            <option value="IB">Campo VIP</option> 
+                            <option value="RI">Campo General</option> 
+                            <option value="PW">Platea Baja</option> 
+                            <option value="BD">Platea Alta</option> 
+                            <option value="RI">Campo General</option> 
+                            <option value="RI">Palco VIP</option> 
+                        </select> 
+                    </div> 
+                    <div> 
+                        <label>Fecha del Show</label> 
+                        <div> 
+                            <label> 
+                                <input type="radio" name="Fecha" value="Fecha"> 15 Nov 
+                            </label> 
+                            <label> 
+                                <input type="radio" name="Fecha" value="Fecha"> 16 Nov
+                            </label> 
+                            <label> 
+                                <input type="radio" name="Fecha" value="Fecha"> 18 Nov
+                            </label> 
+                        </div> 
+                    </div> 
+                    <div> 
+                        <label>Beneficios</label> 
+                        <div> 
+                            <label> 
+                                <input type="checkbox" name="Beneficios" value="Beneficios"> Acceso a Soundcheck
+                            </label> 
+                            <label> 
+                                <input type="checkbox" name="Beneficios" value="Beneficios"> Army Bomb Oficial 
+                            </label> 
+                            <label> 
+                                <input type="checkbox" name="Beneficios" value="Beneficios"> Fast Pass 
+                            </label> 
+                            <label> 
+                                <input type="checkbox" name="Beneficios" value="Beneficios"> Kit Merchandising 
+                            </label> 
+                        </div> 
+                    </div> 
+                    <div> 
+                        <label for="comentarios">Aclaraciones especiales o accesibilidad</label> 
+                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Indique si requiere espacio para silla de ruedas o alguna asistencia especial para el ingreso."></textarea> 
+                    </div> 
+                </fieldset> 
+
+                <fieldset> 
+                    <legend>Datos de Seguridad</legend> 
+                    <div> 
+                        <label for="password">Contraseña *</label> 
+                        <input type="password" id="password" name="password" placeholder="Debe contener un minimo de 8 caracteres" minlength="8" required> 
+                    </div> 
+                    <div> 
+                        <label for="confirmPassword">Confirmar contraseña *</label> 
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repita su contraseña" minlength="8" required> 
+                    </div> 
+                    <div> 
+                        <label> 
+                            <input type="checkbox" name="terminos" required> Acepto los <a href="#">términos y condiciones</a> * 
+                        </label> 
+                    </div> 
+                    <div> 
+                        <button type="submit">Enviar inscripción</button> 
+                        <button type="reset">Reiniciar Compra</button> 
+                    </div> 
+                </fieldset> 
+            </form> 
+        </div> 
+
+        <footer> 
+            <p>Formulario 2 hecho por: Nazareno Furiasse</p> 
+            <button id="btn-volver-inicio">Volver al Inicio</button>
+        </footer> 
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const vistaInicio = document.getElementById('vista-inicio');
+            const vistaEntradas = document.getElementById('vista-entradas');
+            const btnMostrarFormulario = document.getElementById('btn-mostrar-formulario');
+            const btnVolverInicio = document.getElementById('btn-volver-inicio');
+            const form = document.getElementById('registroForm');
+
+            btnMostrarFormulario.addEventListener('click', () => {
+                vistaInicio.classList.add('oculto');
+                vistaEntradas.classList.remove('oculto');
+                window.scrollTo(0, 0);
+            });
+
+            btnVolverInicio.addEventListener('click', () => {
+                vistaEntradas.classList.add('oculto');
+                vistaInicio.classList.remove('oculto');
+                window.scrollTo(0, 0);
+            });
+
+
+            form.addEventListener('submit', (e) => {
+                const pass = document.getElementById('password').value;
+                const confirmPass = document.getElementById('confirmPassword').value;
+
+                if (pass !== confirmPass) {
+                    e.preventDefault();
+                    alert('Las contraseñas no coinciden. Por favor, verifícalas.');
+                } else {
+                    alert('¡Formulario enviado con éxito!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
